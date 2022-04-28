@@ -61,6 +61,7 @@ package riscv_opcodes_pkg;
                    OPC_JALR     = 5'b11_001,
                    OPC_JAL      = 5'b11_011,
                    OPC_SYSTEM   = 5'b11_100;
+                   OPC_ASC      = 5'b11_101; // OPCODE FOR APPLICATION SPECIFIC CACHE
 
   /*
    * RV32/RV64 Base instructions
@@ -138,6 +139,7 @@ package riscv_opcodes_pkg;
 //                   HRTS       = 32'b001000000101_00000_000_00000_1110011,
                    WFI        = 32'b000100000101_00000_000_00000_1110011;
 
+  // System 
   //                                f7      f3  opcode
   parameter [14:0] CSRRW      = 15'b???????_001_11100,
                    CSRRS      = 15'b???????_010_11100,
@@ -146,6 +148,11 @@ package riscv_opcodes_pkg;
                    CSRRSI     = 15'b???????_110_11100,
                    CSRRCI     = 15'b???????_111_11100;
 
+
+  // Application Specific Cache Instructions
+  //                                f7      f3  opcode
+  parameter [14:0] SET_PRI    = 15'b???????_001_11101,
+                   RST_BLK    = 15'b???????_010_11101;
 
   /*
    * RV32/RV64 A-Extensions instructions
