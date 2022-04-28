@@ -31,9 +31,16 @@
   Changelog: 2017-12-15: Added MEM stage to improve memory access performance
 */
 
+`include "riscv_du_pkg.sv"
 import riscv_du_pkg::*;
+
+`include "riscv_state1.10.sv"
 import riscv_state_pkg::*;
+
+`include "riscv_opcodes_pkg.sv"
 import riscv_opcodes_pkg::*;
+
+`include "biu_constants_pkg.sv"
 import biu_constants_pkg::*;
 
 module riscv_core #(

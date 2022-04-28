@@ -26,9 +26,13 @@
 //   License.                                                      //
 //                                                                 //
 /////////////////////////////////////////////////////////////////////
-
+`include "riscv_rv12_pkg.sv"
 import riscv_rv12_pkg::*;
-import riscv_opcodes_pkg::*;
+
+// `include "riscv_opcodes_pkg.sv"
+// import riscv_opcodes_pkg::*;
+
+`include "riscv_state1.10_pkg.sv"
 import riscv_state_pkg::*;
 
 module riscv_state1_10 #(
